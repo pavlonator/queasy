@@ -1,0 +1,35 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+    
+    
+    <servlet>
+        <servlet-name>GetMeta</servlet-name>
+        <servlet-class>com.queasy.GetMeta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetPage</servlet-name>
+        <servlet-class>com.queasy.GetPage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendAnswer</servlet-name>
+        <servlet-class>com.queasy.SendAnswer</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>GetMeta</servlet-name>
+        <url-pattern>/meta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetPage</servlet-name>
+        <url-pattern>/page</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendAnswer</servlet-name>
+        <url-pattern>/answer</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <script type="text/javascript" src="js/quiz.js"/>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"/>
+</head>
+<body>
+    <div id="main"></div>
+    <div id="hiddenTemplates">
+        <div id="startPageTemplate">
+            <p>
+            <button onclick="start()">Start</button>
+            <p>
+            <i>this test has #slides slide#many</i>
+        </div>
+        <div id="templateCommon">
+            <h2>#caption</h2>
+            <form>
+            <p>#slideBody
+            </form>
+            <p>#buttons
+        </div>
+        <div id=template_btn_Prev>
+            <button onclick="prev()">&lt;&lt;Prev</button>
+        </div>
+        <div id=template_btn_Next>
+            <button onclick="next()">Next&gt;&gt;</button>
+        </div>
+        <div id=template_input_radio>
+            <input type="radio" name="answer" value="#value">#label
+            <br>
+        </div>
+
+    </div>
+</body>
+</html>
