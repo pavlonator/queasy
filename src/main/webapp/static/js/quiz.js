@@ -24,7 +24,7 @@ function onPageReceived(data){
 
     var slideBodyHtml = '';
     if(data.type=='test/radio'){
-        $.each(obj, function(i, val) {
+        $.each(data.options, function(i, val) {
             slideBodyHtml += $("#template_input_radio").html().replace("#value", i).replace("#label", val);
         });
     }
