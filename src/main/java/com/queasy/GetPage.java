@@ -32,16 +32,28 @@ public class GetPage extends HttpServlet {
         options.put(2, "option <i>two</i>");
         options.put(3, "option {three}");
 
-        //if(page==0) {
-            obj.put("guid", guid);
-            obj.put("caption", "Caption Page "+page);
-            obj.put("hasNext", page <= 10);
-            obj.put("hasPrev", page > 1);
-            obj.put("page", page);
+        obj.put("guid", guid);
+        obj.put("caption", "Caption Page "+page);
+        obj.put("hasNext", page <= 10);
+        obj.put("hasPrev", page > 1);
+        obj.put("page", page);
+
+        if(page==1) {
+            obj.put("type", "learn/text");
+            obj.put("content", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+        } else if(page==2) {
+            obj.put("type", "learn/html");
+            obj.put("content", "<i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</i>");
+        } else if(page==3) {
+            obj.put("type", "learn/youtube");
+            obj.put("content", "hon8cwF33F0");
+        } else if(page==4) {
+            obj.put("type", "learn/soundcloud");
+            obj.put("content", "191965777");
+        } else if(page==20) {
             obj.put("type", "test/radio");
             obj.put("options", options );
-            obj.put("null", null);
-        //}
+        }
         resp.setContentType("application/json");
         resp.getWriter().write(obj.toJSONString());
     }
